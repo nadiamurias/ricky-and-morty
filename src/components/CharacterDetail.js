@@ -1,16 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const CharacterDetail = (props) => {
   return (
     <>
-      <p>Volver</p>
-      <div>
-        <img src={props.character.image} alt={props.character.name} />
-        <h3>{props.character.name}</h3>
-        <p>Status: {props.character.status}</p>
-        <p>Species: {props.character.species}</p>
-        <p>Origin: {props.character.origin}</p>
-        <p>Episodes: {props.character.episodes}</p>
+      <Link to={"/"}>
+        <p className="back"> Volver</p>
+      </Link>
+      <div className="detail">
+        <img
+          className="image-detail"
+          src={props.character.image}
+          alt={props.character.name}
+        />
+        <h3 className="name-detail">Name: {props.character.name}</h3>
+        <ul>
+          <li>Status: {props.character.status}</li>
+          <li>Species: {props.character.species}</li>
+          <li>Origin: {props.character.origin}</li>
+          <li>Episodes: {props.character.episode.length}</li>
+        </ul>
       </div>
     </>
   );

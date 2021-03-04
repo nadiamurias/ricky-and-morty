@@ -5,6 +5,7 @@
 }
 
 .page {
+  height: 100vh;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -67,4 +68,23 @@
 }
 .specie-character {
   font-size: 12px;
+}
+
+//card detail
+
+.back {
+  color: white;
+}
+.detail {
+  display: flex;
+  background-color: pink;
+  width: 500px;
+  height: 300px;
+}
+.image-detail {
+  width: 200px;
+  height: 200px;
+}
+.name-detail {
+  width: 100%;
 }

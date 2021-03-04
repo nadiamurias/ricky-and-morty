@@ -16,13 +16,21 @@ const App = () => {
   }, []);
 
   const filterCharacters = characters.filter((character) => {
-    return character.name.toLowerCase().includes(name.toLowerCase()); //no reconoce las minúsculas...
+    return character.name.toLowerCase().includes(name.toLowerCase());
   });
   // console.log(filterCharacters);
 
   const handleInput = (ev) => {
-    console.log(ev.target.value);
     setName(ev.target.value);
+  };
+  const renderDetail = (props) => {
+    const id = parseInt(props.match.params.id);
+    const selectCharacter = characters.find((character) => {
+      return character.id === id;
+    });
+
+    console.log(selectCharacter);
+    return <CharacterDetail character={selectCharacter} />;
   };
 
   return (
@@ -31,14 +39,12 @@ const App = () => {
         <h1>
           <img className="title" src={logo} alt="Ricky and Morty" />
         </h1>
-        <Filters handleInput={handleInput} />
-        <CharacterList characters={filterCharacters} />
-      </div>
-      <div>
         <Switch>
-          <Route path="/character/:characterId">
-            <CharacterDetail />
+          <Route exact path="/">
+            <Filters handleInput={handleInput} />
+            <CharacterList characters={filterCharacters} />
           </Route>
+          <Route path="/character/:id" render={renderDetail} />
         </Switch>
       </div>
     </>
