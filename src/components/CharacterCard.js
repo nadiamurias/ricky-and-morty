@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../stylesheets/App.scss";
 
 const CharacterCard = (props) => {
   return (
     <>
-      <Link to={`/character/${props.character.id}`}>
+      <Link
+        to={`/character/${props.character.id}`}
+        style={{ textDecoration: "none", color: "#ffffff" }}
+      >
         <img
           className="image"
           src={props.character.image}

@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
 import CharacterCard from "./CharacterCard";
+import PhotoNotFound from "../images/advertencia.png";
 
 const CharacterList = (props) => {
   if (props.characters.length === 0) {
     return (
       <div className="not-found">
-        <h2 className="title-not-found">Oops!</h2>
-        <h3 className="subtitle-not-found">We can´t find the character</h3>
+        <img className="image-not-found" src={PhotoNotFound} alt="Not found" />
+        <div className="container-not-found">
+          <h2 className="title-not-found">Oops!</h2>
+          <h3 className="subtitle-not-found">
+            Sorry... but we can´t find the character
+          </h3>
+        </div>
       </div>
     );
   } else {

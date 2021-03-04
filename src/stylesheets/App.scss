@@ -50,6 +50,7 @@
   width: 200px;
   height: 260px;
 }
+
 //character
 
 .image {
@@ -65,39 +66,87 @@
 .name-character {
   font-size: 13px;
   margin-bottom: 5px;
+  text-decoration: none;
 }
 .specie-character {
   font-size: 12px;
+  text-decoration: none;
 }
 
 //card detail
 
 .back {
-  color: white;
+  position: relative;
+  right: -218px;
+  font-family: "Merriweather", serif;
+  color: #ffffff;
 }
 .detail {
   display: flex;
+  align-items: center;
   background-color: #01b2ca;
   width: 500px;
-  height: 300px;
+  height: 250px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  padding: 30px;
 }
 .image-detail {
   width: 200px;
   height: 200px;
 }
-.name-detail {
-  width: 100%;
+.character-details {
+  margin-left: 30px;
 }
-
+.name-detail {
+  color: white;
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  line-height: 25px;
+}
+.list-detail {
+  list-style: none;
+  color: white;
+  font-size: 12px;
+  font-family: "Merriweather", serif;
+  line-height: 18px;
+}
 //not found
 
 .not-found {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: lightgrey;
   width: 500px;
   height: 300px;
   margin-bottom: 30px;
+}
+.image-not-found {
+  width: 100px;
+}
+.container-not-found {
+  margin-left: 30px;
+}
+.title-not-found {
+  font-size: 50px;
+  color: rgb(53, 51, 51);
+  font-family: "Merriweather", serif;
+  margin-bottom: 10px;
+}
+.subtitle-not-found {
+  font-size: 18px;
+  color: rgb(53, 51, 51);
+  font-family: "Merriweather", serif;
+}
+.back-not-found {
+  margin-top: 20px;
+  font-size: 12px;
+  background-color: #f29c1f;
+  font-family: "Merriweather", serif;
+  color: rgb(53, 51, 51);
+  border-radius: 30px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
