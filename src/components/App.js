@@ -35,7 +35,6 @@ const App = () => {
         <CharacterList characters={filterCharacters} />
       </div>
       <div>
-        <p>Volver</p>
         <Switch>
           <Route path="/character/:characterId">
             <CharacterDetail />
