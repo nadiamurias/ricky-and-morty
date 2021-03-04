@@ -9,7 +9,7 @@ const Filters = (props) => {
           type="text"
           onChange={props.handleInput}
           value={props.name}
-          placeholder="Escribe el nombre del personaje"
+          placeholder="Write the name of the character"
         />
       </form>
     </section>

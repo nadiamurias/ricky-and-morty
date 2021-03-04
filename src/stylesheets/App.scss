@@ -5,7 +5,7 @@
 }
 
 .page {
-  height: 100vh;
+  height: 100%;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -77,7 +77,7 @@
 }
 .detail {
   display: flex;
-  background-color: pink;
+  background-color: #01b2ca;
   width: 500px;
   height: 300px;
 }
@@ -87,4 +87,17 @@
 }
 .name-detail {
   width: 100%;
+}
+
+//not found
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  width: 500px;
+  height: 300px;
+  margin-bottom: 30px;
 }

@@ -18,9 +18,10 @@ const App = () => {
   const filterCharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(name.toLowerCase());
   });
-  // console.log(filterCharacters);
+  console.log(filterCharacters);
 
   const handleInput = (ev) => {
+    ev.preventDefault();
     setName(ev.target.value);
   };
   const renderDetail = (props) => {
@@ -29,7 +30,6 @@ const App = () => {
       return character.id === id;
     });
 
-    console.log(selectCharacter);
     return <CharacterDetail character={selectCharacter} />;
   };
 
@@ -41,8 +41,8 @@ const App = () => {
         </h1>
         <Switch>
           <Route exact path="/">
-            <Filters handleInput={handleInput} />
-            <CharacterList characters={filterCharacters} />
+            <Filters handleInput={handleInput} name={name} />
+            <CharacterList characters={filterCharacters} name={name} />
           </Route>
           <Route path="/character/:id" render={renderDetail} />
         </Switch>
