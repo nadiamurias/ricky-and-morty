@@ -92,6 +92,21 @@
   font-size: 12px;
   text-decoration: none;
 }
+// loading
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title-loading {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.image-loading {
+  width: 200px;
+}
 
 //card detail
 

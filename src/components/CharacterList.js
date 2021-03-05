@@ -1,10 +1,18 @@
 import React from "react";
 import CharacterCard from "./CharacterCard";
 import PhotoNotFound from "../images/advertencia.png";
+import PhotoLoading from "../images/loading.png";
 import PropTypes from "prop-types";
 
 const CharacterList = (props) => {
-  if (props.characters.length === 0) {
+  if (props.isLoading) {
+    return (
+      <div className="loading">
+        <h2 className="title-loading">Loading...</h2>
+        <img className="image-loading" src={PhotoLoading} alt="loading" />
+      </div>
+    );
+  } else if (props.characters.length === 0) {
     return (
       <div className="not-found">
         <img className="image-not-found" src={PhotoNotFound} alt="Not found" />

@@ -70,6 +70,7 @@ const App = () => {
           <Route exact path="/">
             <Filters handleFilter={handleFilter} name={name} status={status} />
             <CharacterList
+              isLoading={isLoading}
               characters={filterCharacters}
               name={name}
               status={status}
