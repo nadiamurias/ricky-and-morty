@@ -10,6 +10,8 @@ import CharacterDetail from "./CharacterDetail";
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState("");
+  const [species, setSpecies] = useState("");
+  const [status, setStatus] = useState("");
 
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
@@ -20,9 +22,11 @@ const App = () => {
   });
   console.log(filterCharacters);
 
-  const handleInput = (ev) => {
-    ev.preventDefault();
-    setName(ev.target.value);
+  const handleInput = (inputValue) => {
+    // ev.preventDefault();
+    if (inputValue.key === "name") {
+      setName(inputValue.value);
+    }
   };
   const renderDetail = (props) => {
     const id = parseInt(props.match.params.id);
@@ -41,7 +45,12 @@ const App = () => {
         </h1>
         <Switch>
           <Route exact path="/">
-            <Filters handleInput={handleInput} name={name} />
+            <Filters
+              handleInput={handleInput}
+              name={name}
+              species={species}
+              status={status}
+            />
             <CharacterList characters={filterCharacters} name={name} />
           </Route>
           <Route path="/character/:id" render={renderDetail} />

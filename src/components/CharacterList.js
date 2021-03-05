@@ -10,7 +10,7 @@ const CharacterList = (props) => {
         <div className="container-not-found">
           <h2 className="title-not-found">Oops!</h2>
           <h3 className="subtitle-not-found">
-            Sorry... but we can´t find the character
+            Sorry... but we couldn´t find the character '{props.name}'
           </h3>
         </div>
       </div>

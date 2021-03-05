@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import FilterByName from "./FilterByName";
+import FilterByStatus from "./FilterByStatus";
 
 const Filters = (props) => {
   return (
     <section>
       <form>
-        <input
-          className="input"
-          type="text"
-          onChange={props.handleInput}
-          value={props.name}
-          placeholder="Write the name of the character"
-        />
+        <FilterByName handleInput={props.handleInput} name={props.name} />
+        <FilterByStatus handleInput={props.handleInput} />
       </form>
     </section>
   );

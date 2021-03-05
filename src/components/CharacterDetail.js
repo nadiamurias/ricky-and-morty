@@ -3,6 +3,20 @@ import { Link } from "react-router-dom";
 import PhotoNotFound from "../images/advertencia.png";
 
 const CharacterDetail = (props) => {
+  const status = () => {
+    if (props.character.status === "Alive") {
+      return (
+        <li className="list-detail">Status: {props.character.status} ❤️</li>
+      );
+    } else if (props.character.status === "Dead") {
+      return (
+        <li className="list-detail">Status: {props.character.status} 💀</li>
+      );
+    } else {
+      <li className="list-detail">Status: {props.character.status}</li>;
+    }
+  };
+
   if (props.character === undefined) {
     return (
       <div className="not-found">
@@ -10,7 +24,7 @@ const CharacterDetail = (props) => {
         <div className="container-not-found">
           <h2 className="title-not-found">Oops!</h2>
           <h3 className="subtitle-not-found">
-            Sorry... but we can´t find the character
+            Sorry... but we couldn´t find the character
           </h3>
           <Link to={"/"} style={{ textDecoration: "none" }}>
             <button className="back-not-found">Back to homepage</button>
@@ -33,7 +47,7 @@ const CharacterDetail = (props) => {
           <div className="character-details">
             <h3 className="name-detail">{props.character.name}</h3>
             <ul>
-              <li className="list-detail">Status: {props.character.status}</li>
+              {status()}
               <li className="list-detail">
                 Species: {props.character.species}
               </li>
