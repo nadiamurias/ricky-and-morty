@@ -6,8 +6,11 @@ const Filters = (props) => {
   return (
     <section>
       <form>
-        <FilterByName handleInput={props.handleInput} name={props.name} />
-        <FilterByStatus handleInput={props.handleInput} />
+        <FilterByName handleFilter={props.handleFilter} name={props.name} />
+        <FilterByStatus
+          handleFilter={props.handleFilter}
+          status={props.status}
+        />
       </form>
     </section>
   );

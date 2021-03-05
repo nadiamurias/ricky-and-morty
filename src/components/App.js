@@ -10,22 +10,31 @@ import CharacterDetail from "./CharacterDetail";
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState("");
-  const [species, setSpecies] = useState("");
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("all");
 
   useEffect(() => {
     getDataFromApi().then((data) => setCharacters(data));
   }, []);
 
-  const filterCharacters = characters.filter((character) => {
-    return character.name.toLowerCase().includes(name.toLowerCase());
-  });
+  const filterCharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(name.toLowerCase());
+    })
+    .filter((character) => {
+      if (status === "all") {
+        return true;
+      } else {
+        return character.status === status;
+      }
+    });
   console.log(filterCharacters);
 
-  const handleInput = (inputValue) => {
-    // ev.preventDefault();
+  const handleFilter = (inputValue) => {
+    console.log(inputValue);
     if (inputValue.key === "name") {
       setName(inputValue.value);
+    } else if (inputValue.key === "status") {
+      setStatus(inputValue.value);
     }
   };
   const renderDetail = (props) => {
@@ -45,13 +54,12 @@ const App = () => {
         </h1>
         <Switch>
           <Route exact path="/">
-            <Filters
-              handleInput={handleInput}
+            <Filters handleFilter={handleFilter} name={name} status={status} />
+            <CharacterList
+              characters={filterCharacters}
               name={name}
-              species={species}
               status={status}
             />
-            <CharacterList characters={filterCharacters} name={name} />
           </Route>
           <Route path="/character/:id" render={renderDetail} />
         </Switch>

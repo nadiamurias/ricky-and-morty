@@ -12,8 +12,10 @@ const CharacterDetail = (props) => {
       return (
         <li className="list-detail">Status: {props.character.status} 💀</li>
       );
-    } else {
-      <li className="list-detail">Status: {props.character.status}</li>;
+    } else if (props.character.status === "unknown") {
+      return (
+        <li className="list-detail">Status: {props.character.status} 🤷🏻‍♀️</li>
+      );
     }
   };
 
