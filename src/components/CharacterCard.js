@@ -7,8 +7,9 @@ const CharacterCard = (props) => {
   return (
     <>
       <Link
+        className="detail-link"
         to={`/character/${props.character.id}`}
-        style={{ textDecoration: "none", color: "#ffffff" }}
+        style={{ color: "#ffffff" }}
       >
         <img
           className="image"
@@ -24,10 +25,11 @@ const CharacterCard = (props) => {
   );
 };
 CharacterCard.propTypes = {
-  character: PropTypes.object,
-  id: PropTypes.number,
-  name: PropTypes.string,
-  image: PropTypes.string,
-  specie: PropTypes.string,
+  character: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string,
+    image: PropTypes.string,
+    specie: PropTypes.string,
+  }),
 };
 export default CharacterCard;

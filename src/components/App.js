@@ -11,9 +11,13 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
   const [name, setName] = useState("");
   const [status, setStatus] = useState("all");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getDataFromApi().then((data) => setCharacters(data));
+    getDataFromApi().then((data) => {
+      setCharacters(data);
+      setIsLoading(false);
+    });
   }, []);
 
   const filterCharacters = characters
@@ -27,10 +31,10 @@ const App = () => {
         return character.status === status;
       }
     });
-  console.log(filterCharacters);
+  // console.log(filterCharacters);
 
   const handleFilter = (inputValue) => {
-    console.log(inputValue);
+    // console.log(inputValue);
     if (inputValue.key === "name") {
       setName(inputValue.value);
     } else if (inputValue.key === "status") {
@@ -43,8 +47,18 @@ const App = () => {
       return character.id === id;
     });
 
-    return <CharacterDetail character={selectCharacter} />;
+    return (
+      <CharacterDetail isLoading={isLoading} character={selectCharacter} />
+    );
   };
+
+  useEffect(() => {
+    const sortList = [...characters].sort((a, b) =>
+      a.name > b.name ? 1 : a.name < b.name ? -1 : 0
+    );
+    setCharacters(sortList);
+    console.log(sortList);
+  }, []);
 
   return (
     <>

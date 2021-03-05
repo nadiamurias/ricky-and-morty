@@ -19,8 +19,9 @@ const CharacterDetail = (props) => {
       );
     }
   };
-
-  if (props.character === undefined) {
+  if (props.isLoading) {
+    return "Cargando";
+  } else if (props.character === undefined) {
     return (
       <div className="not-found">
         <img className="image-not-found" src={PhotoNotFound} alt="Not found" />
@@ -29,7 +30,7 @@ const CharacterDetail = (props) => {
           <h3 className="subtitle-not-found">
             Sorry... but we couldn´t find the character
           </h3>
-          <Link to={"/"} style={{ textDecoration: "none" }}>
+          <Link to={"/"} className="detail-link">
             <button className="back-not-found">Back to homepage</button>
           </Link>
         </div>
@@ -38,7 +39,7 @@ const CharacterDetail = (props) => {
   } else {
     return (
       <>
-        <Link to={"/"} style={{ textDecoration: "none" }}>
+        <Link to={"/"} className="detail-link">
           <p className="back"> {"<"} Volver</p>
         </Link>
         <div className="detail">
@@ -65,13 +66,15 @@ const CharacterDetail = (props) => {
     );
   }
 };
+
 CharacterDetail.propTypes = {
-  character: PropTypes.object,
-  name: PropTypes.string,
-  status: PropTypes.string,
-  image: PropTypes.string,
-  origin: PropTypes.string,
-  specie: PropTypes.string,
-  episode: PropTypes.string,
+  character: PropTypes.shape({
+    name: PropTypes.string,
+    status: PropTypes.string,
+    image: PropTypes.string,
+    origin: PropTypes.string,
+    specie: PropTypes.string,
+    episode: PropTypes.string,
+  }),
 };
 export default CharacterDetail;

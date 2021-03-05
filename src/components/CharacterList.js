@@ -18,6 +18,7 @@ const CharacterList = (props) => {
     );
   } else {
     const characters = props.characters.map((character) => {
+      console.log(character);
       return (
         <li key={character.id} className="list">
           <CharacterCard character={character} />
