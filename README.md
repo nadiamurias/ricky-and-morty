@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Ejercicio de evaluación final de React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El ejercicio consiste en desarrollar una página web con un listado de personajes de Rick and Morty, que podemos filtrar por el nombre del personaje utilizando React.
 
-## Available Scripts
+## Resultado
 
-In the project directory, you can run:
+Aquí puedes ver una vista previa y acceder al resultado final a través de este [enlace](http://beta.adalab.es/modulo-3-evaluacion-final-Nadia3584/#/), espero que te guste ❤️
 
-### `npm start`
+![vista_previa] (/Users/nadia/Desktop/evaluacion-final-react.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Estructura de componentes
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- App
+  ** - Filter
+  \*\* - FilterByName
+  \*\* - FilterByStatus
+  ** - CharacterList
+  \*\* -CharacterCard
+  \*\* - CharacterDetail
 
-### `npm test`
+## Tareas realizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Utilización de la api (https://rickandmortyapi.com/documentation/#get-all-characters) para obtener la información.
+- Filtar los personajes por nombre a través de input y por status a través del select.
+- Al clicar sobre un personaje mostrar una tarjeta con sus detalles, en caso de no existir el personaje saldrá un mensaje de error.
+- Incluir un icono en función de que los personajes estuviesen muertos o vivos.
+- Añadir mensaje de error si escribimos el id del personaje a mano en la url y nos equivocamos.
+- Realizar una web responsive para poder adaptarlo a dispositivos pequeños.
 
-### `npm run build`
+## Agradecimientos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Y por último y no menos importante, agradecer a mis profesores @migueldelmazo, @igarrido-adalab y @dayanare por todo su apoyo y soporte durante la realización del mismo 😉 😘
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+💪🏻 💻 a tope!!
