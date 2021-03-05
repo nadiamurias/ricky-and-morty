@@ -6,17 +6,17 @@ El ejercicio consiste en desarrollar una página web con un listado de personaj
 
 Aquí puedes ver una vista previa y acceder al resultado final a través de este [enlace](http://beta.adalab.es/modulo-3-evaluacion-final-Nadia3584/#/), espero que te guste ❤️
 
-![vista_previa] (/Users/nadia/Desktop/evaluacion-final-react.png)
+![vista_previa](/Users/nadia/Desktop/evaluacion-final-react.png)
 
 ## Estructura de componentes
 
 - App
-  ** - Filter
-  \*\* - FilterByName
-  \*\* - FilterByStatus
-  ** - CharacterList
-  \*\* -CharacterCard
-  \*\* - CharacterDetail
+  - Filter
+    - FilterByName
+    - FilterByStatus
+  - CharacterList
+    - CharacterCard
+  - CharacterDetail
 
 ## Tareas realizadas
 
