@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PhotoNotFound from "../images/advertencia.png";
+import PropTypes from "prop-types";
 
 const CharacterDetail = (props) => {
   const status = () => {
@@ -63,5 +64,14 @@ const CharacterDetail = (props) => {
       </>
     );
   }
+};
+CharacterDetail.propTypes = {
+  character: PropTypes.object,
+  name: PropTypes.string,
+  status: PropTypes.string,
+  image: PropTypes.string,
+  origin: PropTypes.string,
+  specie: PropTypes.string,
+  episode: PropTypes.string,
 };
 export default CharacterDetail;

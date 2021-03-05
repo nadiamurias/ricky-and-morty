@@ -1,6 +1,7 @@
 import React from "react";
 import CharacterCard from "./CharacterCard";
 import PhotoNotFound from "../images/advertencia.png";
+import PropTypes from "prop-types";
 
 const CharacterList = (props) => {
   if (props.characters.length === 0) {
@@ -29,5 +30,9 @@ const CharacterList = (props) => {
       </section>
     );
   }
+};
+CharacterList.propTypes = {
+  name: PropTypes.string,
+  characters: PropTypes.array,
 };
 export default CharacterList;

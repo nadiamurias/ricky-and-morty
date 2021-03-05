@@ -1,6 +1,7 @@
 import React from "react";
 import FilterByName from "./FilterByName";
 import FilterByStatus from "./FilterByStatus";
+import PropTypes from "prop-types";
 
 const Filters = (props) => {
   return (
@@ -14,5 +15,10 @@ const Filters = (props) => {
       </form>
     </section>
   );
+};
+Filters.propTypes = {
+  handleFilter: PropTypes.func,
+  status: PropTypes.string,
+  name: PropTypes.string,
 };
 export default Filters;

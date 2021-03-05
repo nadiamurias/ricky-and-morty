@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const FilterByStatus = (props) => {
   const handleSelect = (ev) => {
@@ -23,5 +24,8 @@ const FilterByStatus = (props) => {
       </option>
     </select>
   );
+};
+FilterByStatus.propTypes = {
+  handleFilter: PropTypes.func,
 };
 export default FilterByStatus;
