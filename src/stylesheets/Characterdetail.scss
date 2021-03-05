@@ -1,0 +1,140 @@
+// loading
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & .title-loading {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  & .image-loading {
+    width: 200px;
+  }
+}
+//not found
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 30px;
+  @media all and (min-width: 768px) {
+    width: 500px;
+    height: 300px;
+  }
+  & .image-not-found {
+    width: 80px;
+    margin-left: 20px;
+    @media all and (min-width: 768px) {
+      width: 100px;
+      margin-left: 40px;
+    }
+  }
+  & .container-not-found {
+    margin-left: 20px;
+    @media all and (min-width: 768px) {
+      margin-left: 40px;
+    }
+    & .title-not-found {
+      font-size: 30px;
+      color: rgb(53, 51, 51);
+      font-family: "Merriweather", serif;
+      margin-bottom: 10px;
+      @media all and (min-width: 768px) {
+        font-size: 50px;
+      }
+    }
+    & .subtitle-not-found {
+      font-size: 14px;
+      color: rgb(53, 51, 51);
+      font-family: "Merriweather", serif;
+      @media all and (min-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.back-not-found {
+  margin-top: 20px;
+  font-size: 12px;
+  background-color: #f29c1f;
+  font-family: "Merriweather", serif;
+  color: rgb(53, 51, 51);
+  border-radius: 30px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+//character detail
+
+.detail-link {
+  text-decoration: none;
+}
+
+.back {
+  position: relative;
+  right: -118px;
+  font-family: "Merriweather", serif;
+  color: #ffffff;
+  @media all and (min-width: 768px) {
+    right: -218px;
+  }
+}
+.detail {
+  display: flex;
+  align-items: center;
+  background-color: #01b2ca;
+  width: 300px;
+  height: 200px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  padding: 15px;
+  @media all and (min-width: 768px) {
+    width: 500px;
+    height: 250px;
+    padding: 30px;
+  }
+
+  &-link {
+    text-decoration: none;
+  }
+  & .image-detail {
+    width: 150px;
+    height: 150px;
+    @media all and (min-width: 768px) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  & .character-details {
+    margin-left: 15px;
+    @media all and (min-width: 768px) {
+      margin-left: 30px;
+    }
+  }
+  & .name-detail {
+    color: white;
+    font-family: "Merriweather", serif;
+    font-size: 14px;
+    margin-bottom: 5px;
+    @media all and (min-width: 768px) {
+      line-height: 25px;
+    }
+  }
+}
+
+.list-detail {
+  list-style: none;
+  color: white;
+  font-size: 12px;
+  font-family: "Merriweather", serif;
+  line-height: 18px;
+}

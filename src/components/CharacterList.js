@@ -2,6 +2,7 @@ import React from "react";
 import CharacterCard from "./CharacterCard";
 import PhotoNotFound from "../images/advertencia.png";
 import PhotoLoading from "../images/loading.png";
+import "../stylesheets/Characterlist.scss";
 import PropTypes from "prop-types";
 
 const CharacterList = (props) => {

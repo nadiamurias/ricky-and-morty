@@ -31,16 +31,15 @@ const App = () => {
         return character.status === status;
       }
     });
-  // console.log(filterCharacters);
 
   const handleFilter = (inputValue) => {
-    // console.log(inputValue);
     if (inputValue.key === "name") {
       setName(inputValue.value);
     } else if (inputValue.key === "status") {
       setStatus(inputValue.value);
     }
   };
+
   const renderDetail = (props) => {
     const id = parseInt(props.match.params.id);
     const selectCharacter = characters.find((character) => {

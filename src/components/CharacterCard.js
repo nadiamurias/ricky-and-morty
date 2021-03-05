@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../stylesheets/App.scss";
+import "../stylesheets/Charactercard.scss";
 import PropTypes from "prop-types";
 
 const CharacterCard = (props) => {

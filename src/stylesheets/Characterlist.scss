@@ -1,0 +1,78 @@
+// loading
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & .title-loading {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  & .image-loading {
+    width: 200px;
+  }
+}
+//not found
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 30px;
+  @media all and (min-width: 768px) {
+    width: 500px;
+    height: 300px;
+  }
+  & .image-not-found {
+    width: 80px;
+    margin-left: 20px;
+    @media all and (min-width: 768px) {
+      width: 100px;
+      margin-left: 40px;
+    }
+  }
+  & .container-not-found {
+    margin-left: 20px;
+    @media all and (min-width: 768px) {
+      margin-left: 40px;
+    }
+    & .title-not-found {
+      font-size: 30px;
+      color: rgb(53, 51, 51);
+      font-family: "Merriweather", serif;
+      margin-bottom: 10px;
+      @media all and (min-width: 768px) {
+        font-size: 50px;
+      }
+    }
+    & .subtitle-not-found {
+      font-size: 14px;
+      color: rgb(53, 51, 51);
+      font-family: "Merriweather", serif;
+      @media all and (min-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  }
+}
+//list
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  margin-right: 50px;
+  & .list {
+    list-style: none;
+    background-color: #01b2ca;
+    margin: 10px;
+    color: white;
+    width: 200px;
+    height: 260px;
+  }
+}

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PhotoNotFound from "../images/advertencia.png";
 import PhotoLoading from "../images/loading.png";
+import "../stylesheets/Characterdetail.scss";
 import PropTypes from "prop-types";
 
 const CharacterDetail = (props) => {

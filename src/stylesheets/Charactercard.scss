@@ -1,0 +1,27 @@
+//link
+
+.detail-link {
+  text-decoration: none;
+}
+
+//character card
+
+.image {
+  width: 200px;
+  height: 200px;
+}
+
+.description {
+  margin-left: 10px;
+  margin-top: 5px;
+  font-family: "Merriweather", serif;
+  & .name-character {
+    font-size: 13px;
+    margin-bottom: 5px;
+    text-decoration: none;
+  }
+  & .specie-character {
+    font-size: 12px;
+    text-decoration: none;
+  }
+}
