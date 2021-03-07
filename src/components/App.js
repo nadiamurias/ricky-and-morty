@@ -24,6 +24,7 @@ const App = () => {
     .filter((character) => {
       return character.name.toLowerCase().includes(name.toLowerCase());
     })
+    .sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
     .filter((character) => {
       if (status === "all") {
         return true;
@@ -50,14 +51,6 @@ const App = () => {
       <CharacterDetail isLoading={isLoading} character={selectCharacter} />
     );
   };
-
-  useEffect(() => {
-    const sortList = [...characters].sort((a, b) =>
-      a.name > b.name ? 1 : a.name < b.name ? -1 : 0
-    );
-    setCharacters(sortList);
-    console.log(sortList);
-  }, []);
 
   return (
     <>
