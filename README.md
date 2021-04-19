@@ -1,12 +1,10 @@
-# Ejercicio de evaluación final de React
+![Ricky & Morty](https://raw.githubusercontent.com/nadiamurias/ricky-and-morty/main/src/images/logo.png)
 
-El ejercicio consiste en desarrollar una página web con un listado de personajes de Rick and Morty, que podemos filtrar por el nombre del personaje utilizando React.
+Realización de una página web con un buscador para encontrar personajes de la serie de Ricky and Morty y ver las caracterísitcas principales de cada personaje clicando sobre él. Además incluye un filtro por status: si está vivo, muerto, no se sabe o todos ellos. Ha sido realizado con React JS.
 
 ## Resultado
 
-Aquí puedes ver una vista previa y acceder al resultado final a través de este [enlace](http://beta.adalab.es/modulo-3-evaluacion-final-Nadia3584/#/), espero que te guste ❤️
-
-![vista_previa](/Users/nadia/Desktop/evaluacion-final-react.png)
+Aquí puedes acceder al resultado final a través de este [enlace](https://nadiamurias.github.io/ricky-and-morty/), espero que te guste ❤️
 
 ## Estructura de componentes
 
