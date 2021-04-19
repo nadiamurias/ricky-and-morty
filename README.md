@@ -25,10 +25,6 @@ Aquí puedes acceder al resultado final a través de este [enlace](https://nadia
 - Añadir mensaje de error si escribimos el id del personaje a mano en la url y nos equivocamos.
 - Realizar una web responsive para poder adaptarlo a dispositivos pequeños.
 
-## Agradecimientos
-
-Y por último y no menos importante, agradecer a mis profesores @migueldelmazo, @igarrido-adalab y @dayanare por todo su apoyo y soporte durante la realización del mismo 😉 😘
-
 ---
 
 💪🏻 💻 a tope!!
