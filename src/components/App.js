@@ -24,14 +24,14 @@ const App = () => {
     .filter((character) => {
       return character.name.toLowerCase().includes(name.toLowerCase());
     })
-    .sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
     .filter((character) => {
       if (status === "all") {
         return true;
       } else {
         return character.status === status;
       }
-    });
+    })
+    .sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0));
 
   const handleFilter = (inputValue) => {
     if (inputValue.key === "name") {
